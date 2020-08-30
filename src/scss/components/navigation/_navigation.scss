@@ -1,0 +1,121 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .menu {
+    display: flex;
+
+    &__list {
+      margin-right: 20px;
+    }
+
+    &__link {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: hsla(0, 0%, 100%, 0.404);
+    }
+  }
+
+  .contacts {
+    text-align: right;
+
+    &__link {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: hsla(0, 0%, 100%, 0.5);
+    }
+  }
+
+  .burger {
+    display: none;
+  }
+}
+
+@media (max-width: 990px) {
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .menu {
+      position: absolute;
+      left: 0;
+      top: 0;
+      flex-direction: column;
+      padding: 50px 10px 30px 50px;
+      width: 70%;
+      height: 100vh;
+      background: rgb(255, 255, 255);
+      transform: translateX(-100%);
+      transition: ease 0.5s;
+
+      &_active {
+        transform: translateX(0);
+        transition: ease 0.5s;
+      }
+
+      &__list {
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+
+      &__link {
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 17px;
+        color: hsla(0, 0%, 0%, 0.404);
+      }
+    }
+
+    .contacts {
+      display: none;
+    }
+
+    .burger {
+      position: relative;
+      display: inline-block;
+      width: 28px;
+      height: 25px;
+      cursor: pointer;
+
+      &__line {
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 2px;
+        width: 28px;
+        height: 4px;
+        background: #fff;
+        transition: ease 0.5s;
+
+        &:nth-child(2) {
+          top: 9px;
+        }
+
+        &:last-child {
+          top: 18px;
+        }
+      }
+
+      &_active {
+        .burger__line {
+          top: calc(50% - 4px);
+          transform: rotate(45deg);
+          transition: ease 0.5s;
+
+          &:nth-child(2) {
+            display: none;
+          }
+
+          &:last-child {
+            transform: rotate(-45deg);
+            transition: ease 0.5s;
+          }
+        }
+      }
+    }
+  }
+}

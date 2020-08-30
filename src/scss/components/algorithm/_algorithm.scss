@@ -1,0 +1,67 @@
+.algorithm {
+  &-wrapper {
+    position: relative;
+    border-radius: 5px;
+    padding-top: 90px;
+    padding-left: 105px;
+    width: 100%;
+    height: 318px;
+    background: url("../img/header/header-bg.jpg");
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 693px;
+      height: 100%;
+      background: url("../img/algorithm/algorithm-bg.png") no-repeat;
+    }
+  }
+
+  &__title {
+    width: 265px;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 45px;
+    color: var(--color-white);
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 17px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 29px;
+    color: #ffffff38;
+
+    span {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 29px;
+      background: linear-gradient(-78deg, #ff40f8 0%, #cf97ff 35%, #40c7ff 70%, #40e6ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .algorithm {
+    &-wrapper {
+      position: relative;
+      padding: 36px 39px 10px 27px;
+      height: 508px;
+
+      &::after {
+        position: absolute;
+        top: inherit;
+        bottom: 0;
+        width: 100%;
+        height: 370px;
+        background: url("../img/algorithm-bg-mobile.png") no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+}

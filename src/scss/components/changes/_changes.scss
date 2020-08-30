@@ -1,0 +1,132 @@
+.changes {
+  padding-top: 95px;
+  padding-bottom: 80px;
+
+  &__subtitle {
+    margin-top: 46px;
+    max-width: 614px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #808080;
+
+    span {
+      font-weight: 700;
+      color: #000000;
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 86px;
+  }
+
+  &-item {
+    &__logo {
+      height: 54px;
+    }
+
+    &__subtext {
+      margin-top: 7px;
+      margin-bottom: 46px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: #808080;
+    }
+
+    &__title {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-weight: 700;
+      font-size: 50px;
+      background-image: linear-gradient(-77deg, #ff40f8 0, #a740ff 35%, #4045ff 70%, #40e6ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &-list {
+      width: 345px;
+
+      &__item {
+        position: relative;
+        margin-bottom: 39px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: -15px;
+          top: 7px;
+          border: 1px solid transparent;
+          border-image: linear-gradient(-247deg, #ff40f8 0%, #a740ff 35%, #4045ff 70%, #40e6ff 100%);
+          border-image-slice: 1;
+          border-radius: 100%;
+          width: 7px;
+          height: 7px;
+        }
+      }
+    }
+
+    &-dack-block {
+      position: relative;
+      margin-top: 128px;
+      border-radius: 5px;
+      padding: 26px 10px 26px 29px;
+      background-color: #e4e5ee;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 137px;
+        height: 114px;
+        background-image: url("../img/changes-bg.png");
+      }
+
+      &__text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .changes {
+    background-color: #f4f4fa;
+
+    &-wrapper {
+      display: block;
+    }
+
+    &-item {
+      border-radius: 5px;
+      padding: 35px 56px 51px 27px;
+      width: 250px;
+      height: 650px;
+      background-color: #e4e5ee;
+
+      .changes-item-list {
+        width: 100%;
+
+        &__item {
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .changes-item-dack-block {
+      margin-top: 40px;
+      width: 100%;
+    }
+  }
+}

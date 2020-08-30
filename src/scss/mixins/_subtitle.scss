@@ -1,0 +1,12 @@
+@mixin subtitle {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: var(--color-white);
+
+  @media (max-width: 700px) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

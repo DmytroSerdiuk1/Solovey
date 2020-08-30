@@ -1,0 +1,35 @@
+@mixin input {
+  outline: none;
+  border: 1px solid #d6d6d6;
+  border-radius: 5px;
+  padding: 15px 26px;
+  width: 346px;
+  height: 60px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 29px;
+  color: hsla(0, 0%, 0%, 0.5);
+
+  &:focus {
+    border-width: 1px;
+    border-image: linear-gradient(-78deg, #ff40f8 0%, #a740ff 35%, #4045ff 70%, #40e6ff 100%);
+    border-image-slice: 1;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    color: var(--color-black);
+  }
+
+  &_smal {
+    width: 100%;
+    background: none;
+
+    &:focus {
+      border-image: none;
+    }
+  }
+
+  @media (max-width: 425px) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,22 @@
+.question {
+  padding-top: 97px;
+  padding-bottom: 105px;
+  background-image: url("../img/header/header-bg.jpg");
+
+  &__title {
+    font-weight: 700;
+    font-size: 67px;
+    line-height: 77.51px;
+    color: var(--color-white);
+  }
+}
+
+@media (max-width: 425px) {
+  .question {
+    &__title {
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 46px;
+    }
+  }
+}

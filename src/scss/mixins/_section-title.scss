@@ -1,0 +1,13 @@
+@mixin section-title {
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 58px;
+  color: var(--color-black);
+
+  &_white {
+    color: var(--color-white);
+  }
+  @media (max-width: 425px) {
+    font-size: 44px;
+  }
+}

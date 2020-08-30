@@ -1,0 +1,16 @@
+.header {
+  padding-top: 40px;
+  padding-bottom: 110px;
+  background: url("../img/header/header-bg.jpg") no-repeat;
+  background-size: cover;
+
+  &__title {
+    margin-top: 90px;
+  }
+
+  &__subtitle {
+    margin-top: 25px;
+  }
+}
+
+@import "./header_media"

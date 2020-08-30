@@ -1,0 +1,21 @@
+.forms {
+  padding-top: 109px;
+  padding-bottom: 120px;
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 19px;
+  }
+}
+
+@media (max-width: 425px) {
+  .forms {
+    form {
+      input {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
