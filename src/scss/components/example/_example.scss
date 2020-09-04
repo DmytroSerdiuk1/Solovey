@@ -26,7 +26,7 @@
   }
 
   &-wrapper {
-    width: 660px;
+    max-width: 660px;
   }
 
   &-item {
@@ -75,6 +75,11 @@
         }
       }
     }
+  }
+}
+@media (max-width: 1700px){
+  .example-item__text{
+    width: 450px;
   }
 }
 

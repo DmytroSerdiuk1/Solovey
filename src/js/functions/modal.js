@@ -10,10 +10,12 @@ function showModal(showButton, showBlock) {
         let show = () => {
             modalButton.classList.add(`${modalButtonReplace}_active`);
             modalBlock.classList.add(`${modalBlockReplace}_active`);
+            document.body.style.overflow = 'hidden';
           },
           hide = () => {
             modalButton.classList.remove(`${modalButtonReplace}_active`);
             modalBlock.classList.remove(`${modalBlockReplace}_active`);
+            document.body.style.overflow = '';
           };
   
         if (!modalBlock.classList.contains(`${modalBlockReplace}_active`)) {
